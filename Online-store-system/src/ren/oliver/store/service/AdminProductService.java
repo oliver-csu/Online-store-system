@@ -6,6 +6,7 @@ import java.util.List;
 import ren.oliver.store.dao.AdminProductDao;
 import ren.oliver.store.domain.Category;
 import ren.oliver.store.domain.Product;
+import ren.oliver.store.vo.Condition;
 
 public class AdminProductService {
 
@@ -44,6 +45,12 @@ public class AdminProductService {
 	public void updateProduct(Product product) throws SQLException {
 		AdminProductDao dao = new AdminProductDao();
 		dao.updateProduct(product);
+	}
+
+	// 根据条件查询商品列表
+	public List<Product> findProductListByCondition(Condition condition) throws SQLException {
+		AdminProductDao dao = new AdminProductDao();
+		return dao.findProductListByCondition(condition);
 	}
 
 }
