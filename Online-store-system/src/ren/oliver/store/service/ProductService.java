@@ -1,6 +1,7 @@
 package ren.oliver.store.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import ren.oliver.store.dao.ProductDao;
@@ -47,10 +48,15 @@ public class ProductService {
 		int index = (currentPage - 1) * currentCount;
 
 		List<Product> productList = dao.findProductListForPageBean(index, currentCount);
-		
 		pageBean.setProductList(productList);
 
 		return pageBean;
+	}
+
+	// 根据关键字查询商品
+	public List<Object> findProductByWord(String word) throws SQLException {
+		ProductDao dao = new ProductDao();
+		return dao.findProductByWord(word);
 	}
 
 }
