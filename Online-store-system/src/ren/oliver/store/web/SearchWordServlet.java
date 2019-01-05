@@ -10,10 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-import ren.oliver.store.domain.Product;
 import ren.oliver.store.service.ProductService;
-
-import net.sf.json.JSONArray;
 
 public class SearchWordServlet extends HttpServlet {
 

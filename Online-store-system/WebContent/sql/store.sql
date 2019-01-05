@@ -31,3 +31,14 @@ CREATE TABLE `user` (
 ) DEFAULT CHARSET=utf8;
 
 INSERT INTO `user` VALUES ('1', 'oliver');
+
+CREATE TABLE `customer` (
+  `id` varchar(32) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `realname` varchar(50) DEFAULT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `email` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+) DEFAULT CHARSET=utf8;
+

@@ -109,4 +109,7 @@
     <servlet-name>SearchWordServlet</servlet-name>
     <url-pattern>/searchWord</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>ren.oliver.store.web.BirthdayListener</listener-class>
+  </listener>
 </web-app>
