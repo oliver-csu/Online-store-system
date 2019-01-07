@@ -112,4 +112,23 @@
   <listener>
     <listener-class>ren.oliver.store.web.BirthdayListener</listener-class>
   </listener>
+  <filter>
+    <display-name>AutoLoginFilter</display-name>
+    <filter-name>AutoLoginFilter</filter-name>
+    <filter-class>ren.oliver.store.web.AutoLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AutoLoginFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>ren.oliver.store.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
 </web-app>
